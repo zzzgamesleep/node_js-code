@@ -1,0 +1,20 @@
+@import 'variables.scss';
+  @media (max-width: 768px) {
+    .menu-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      grid-gap: 10px; /* Khoảng cách giữa các mục menu */
+      padding: 0;
+      align-items: center;
+    }
+}
+    .nav-item {
+      border-right: 1px solid #3f3e3e; /* Đặt màu cho dòng ngăn cách, ví dụ: màu xám (#ccc) */
+      height: 40px; /* Độ lớn của dòng ngăn cách */
+      text-align: center; /* Đặt văn bản ở giữa của mục menu */
+    }
+  
+    .nav-item:last-child {
+      border-right: none; /* Loại bỏ đường ngăn cách phía bên phải của mục cuối cùng */
+    }
+  
