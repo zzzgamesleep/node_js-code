@@ -1,20 +1,70 @@
-@import 'variables.scss';
-  @media (max-width: 768px) {
-    .menu-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      grid-gap: 10px; /* Khoảng cách giữa các mục menu */
-      padding: 0;
-      align-items: center;
-    }
+/* Thiết kế cho màn hình nhỏ hơn hoặc bằng 576px */
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 20px; /* Điều chỉnh kích thước chữ cho màn hình nhỏ hơn */
+  }
+
+  .collapse {
+    margin-right: 10px; /* Điều chỉnh khoảng cách bên phải */
+  }
+
+  .nav-item {
+    border-right: none;
+    display: flex;
+    padding: 0 10px; /* Điều chỉnh padding */
+    margin-left: 2px;
+    align-items: center; /* Canh giữa theo chiều dọc */
+    height: 30px; /* Điều chỉnh chiều cao */
+  }
+
+  .dropdown-menu {
+    border-bottom: none; /* Ẩn đường kẻ dưới cùng của menu dropdown */
+  }
 }
-    .nav-item {
-      border-right: 1px solid #3f3e3e; /* Đặt màu cho dòng ngăn cách, ví dụ: màu xám (#ccc) */
-      height: 40px; /* Độ lớn của dòng ngăn cách */
-      text-align: center; /* Đặt văn bản ở giữa của mục menu */
-    }
-  
-    .nav-item:last-child {
-      border-right: none; /* Loại bỏ đường ngăn cách phía bên phải của mục cuối cùng */
-    }
-  
+
+/* Thiết kế cho màn hình từ 577px đến 992px */
+@media (min-width: 577px) and (max-width: 992px) {
+  .navbar-brand {
+    font-size: 24px; /* Điều chỉnh kích thước chữ cho màn hình này */
+  }
+
+  .collapse {
+    margin-right: 20px; /* Điều chỉnh khoảng cách bên phải */
+  }
+
+  .nav-item {
+    border-right: none;
+    display: flex;
+    padding: 0 20px; /* Điều chỉnh padding */
+    margin-left: 4px;
+    align-items: center; /* Canh giữa theo chiều dọc */
+    height: 40px; /* Điều chỉnh chiều cao */
+  }
+
+  .dropdown-menu {
+    border-bottom: none; /* Ẩn đường kẻ dưới cùng của menu dropdown */
+  }
+}
+
+/* Thiết kế cho màn hình lớn hơn 992px */
+@media (min-width: 993px) {
+  .navbar-brand {
+    font-size: 30px; /* Điều chỉnh kích thước chữ cho màn hình lớn hơn */
+  }
+
+  .collapse {
+    margin-right: 150px; /* Điều chỉnh khoảng cách bên phải */
+  }
+
+  .nav-item {
+    padding: 0 20px; /* Điều chỉnh padding */
+    margin-left: 4px;
+    align-items: center; /* Canh giữa theo chiều dọc */
+    height: 40px; /* Điều chỉnh chiều cao */
+    border-right: 1px solid rgb(32, 32, 32); /* Ẩn đường kẻ cho màn hình lớn hơn */
+  }
+
+  .dropdown-menu {
+    border-bottom: 1px solid rgb(32, 32, 32); /* Hiển thị đường kẻ dưới cùng của menu dropdown */
+  }
+}
